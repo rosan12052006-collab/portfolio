@@ -149,8 +149,9 @@ function renderProjects(projects) {
         .map((t) => `<span class="tech-pill">${escapeHtml(t)}</span>`)
         .join("");
       const mediaStyle = p.image ? `style="background-image:url('${escapeHtml(p.image)}')"` : "";
+      const clickUrl = p.liveUrl || p.repoUrl || "";
       return `
-        <article class="project-card reveal" style="transition-delay:${i * 60}ms">
+        <article class="project-card reveal" style="transition-delay:${i * 60}ms" data-url="${escapeHtml(clickUrl)}">
           <div class="project-card__media" ${mediaStyle}>
             ${p.liveUrl ? '<span class="live-badge">● Live</span>' : ""}
           </div>
@@ -170,6 +171,20 @@ function renderProjects(projects) {
 
   // re-observe newly added cards for reveal animation
   document.querySelectorAll(".project-card.reveal").forEach((el) => observer.observe(el));
+
+  // Make the whole card clickable (opens liveUrl, or repoUrl if no live link)
+  document.querySelectorAll(".project-card[data-url]").forEach((card) => {
+    const url = card.dataset.url;
+    if (!url) return;
+    card.style.cursor = "pointer";
+    card.addEventListener("click", () => {
+      window.open(url, "_blank", "noopener");
+    });
+    // Prevent inner links from double-triggering (let them handle their own navigation)
+    card.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", (e) => e.stopPropagation());
+    });
+  });
 }
 
 function escapeHtml(str = "") {
