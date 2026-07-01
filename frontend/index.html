@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rosan S — Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Rosan S — full-stack developer building AI tools and production-ready web platforms." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Custom cursor dot (signature touch) -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">Rosan S<span class="nav__logo-dot">.</span></a>
+      <nav class="nav__links">
+        <a href="#work">Work</a>
+        <a href="#certs">Certs</a>
+        <a href="#about">About</a>
+        <a href="#skills">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__grid"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">
+          <span class="status-dot"></span>
+          <span id="statusLine">currently building things that ship</span>
+        </p>
+        <h1 class="hero__title">
+          <span class="hero__title-line">I design &amp; build</span>
+          <span class="hero__title-line hero__title-line--accent">full‑stack software<span class="hero__cursor">_</span></span>
+        </h1>
+        <p class="hero__sub">
+         Rosan S — full-stack developer. I turn ideas into working, deployed products — not demos that only run on localhost
+        </p>
+        <div class="hero__cta">
+          <a href="#work" class="btn btn--primary">View work <span aria-hidden="true">↓</span></a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        </div>
+        
+        <div class="contact__socials">
+          <a href="https://github.com/rosan12052006-collab" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/rosan-s-30704b416" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:rosan12052006@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="hero__terminal" aria-hidden="true">
+        <div class="terminal__bar">
+          <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+          <span class="terminal__title">~/portfolio</span>
+        </div>
+        <div class="terminal__body" id="terminalBody"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="section-head">
+        <span class="section-tag">About</span>
+        <h2>What I do</h2>
+      </div>
+      <div class="about__grid">
+        <p class="about__lead">
+        I build full-stack systems end to end — authentication, real-time data, and deployment included, not bolted on later. My work spans JWT-based auth flows, Socket.IO real-time updates, automated email pipelines, and a deterministic NLP compiler that turns plain English into runnable code. Every project here is deployed and live, not a local demo
+        </p>
+        <div class="about__stats">
+          <div class="stat">
+            <span class="stat__num">4</span>
+            <span class="stat__label">Full-stack apps shipped</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">6</span>
+            <span class="stat__label">Certifications earned</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">100%</span>
+            <span class="stat__label">Deployed &amp; live</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+      <div class="section-head">
+        <span class="section-tag">Skills</span>
+        <h2>Tools I reach for</h2>
+      </div>
+      <div class="skills__grid">
+        <div class="skill-card">
+          <span class="skill-card__cat">Frontend</span>
+          <ul>
+            <li>React.js</li>
+            <li>JavaScript (ES6+)</li>
+            <li>HTML5 &amp; CSS3</li>
+            <li>Responsive / Mobile-first</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <span class="skill-card__cat">Backend</span>
+          <ul>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>REST API design</li>
+            <li>JWT Auth</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <span class="skill-card__cat">Database</span>
+          <ul>
+            <li>MongoDB / Mongoose</li>
+            <li>MySQL</li>
+            <li>PostgreSQL</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <span class="skill-card__cat">Tools</span>
+          <ul>
+            <li>Git &amp; GitHub</li>
+            <li>Vercel / Render</li>
+            <li>Postman</li>
+            <li>VS Code</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="certs" id="certs">
+      <div class="section-head">
+        <span class="section-tag">Certifications</span>
+        <h2>Certificates &amp; achievements</h2>
+        <p class="section-note">Click any certificate to view it full-size.</p>
+      </div>
+      <div class="certs__grid" id="certsGrid">
+        <a class="cert-card" href="assets/certificates/infosys-datascience.png" target="_blank" rel="noopener">
+          <div class="cert-card__thumb" style="background-image:url('assets/certificates/infosys-datascience.png')"></div>
+          <div class="cert-card__body">
+            <span class="cert-card__badge">IMG</span>
+            <h3>Introduction to Data Science</h3>
+            <p>Infosys Springboard · March 2026</p>
+          </div>
+        </a>
+
+        <a class="cert-card" href="assets/certificates/infosys-nlp.png" target="_blank" rel="noopener">
+          <div class="cert-card__thumb" style="background-image:url('assets/certificates/infosys-nlp.png')"></div>
+          <div class="cert-card__body">
+            <span class="cert-card__badge">IMG</span>
+            <h3>Introduction to Natural Language Processing</h3>
+            <p>Infosys Springboard · April 2026</p>
+          </div>
+        </a>
+
+        <a class="cert-card" href="assets/certificates/guvi-fullstack.png" target="_blank" rel="noopener">
+          <div class="cert-card__thumb" style="background-image:url('assets/certificates/guvi-fullstack.png')"></div>
+          <div class="cert-card__body">
+            <span class="cert-card__badge">IMG</span>
+            <h3>Full Stack Skills for Product Based Companies</h3>
+            <p>GUVI × HCL · June 2026</p>
+          </div>
+        </a>
+
+        <a class="cert-card" href="assets/certificates/codorra-participation.png" target="_blank" rel="noopener">
+          <div class="cert-card__thumb" style="background-image:url('assets/certificates/codorra-participation.png')"></div>
+          <div class="cert-card__body">
+            <span class="cert-card__badge">IMG</span>
+            <h3>Codorra 2026 — Participation</h3>
+            <p>Unstop · VIT Vellore</p>
+          </div>
+        </a>
+
+        <a class="cert-card" href="assets/certificates/samsung-treasurehunt.png" target="_blank" rel="noopener">
+          <div class="cert-card__thumb" style="background-image:url('assets/certificates/samsung-treasurehunt.png')"></div>
+          <div class="cert-card__body">
+            <span class="cert-card__badge">IMG</span>
+            <h3>Samsung Galaxy AI Treasure Hunt</h3>
+            <p>Unstop · June 2026</p>
+          </div>
+        </a>
+
+        <a class="cert-card" href="assets/certificates/campuscrew-100k.png" target="_blank" rel="noopener">
+          <div class="cert-card__thumb" style="background-image:url('assets/certificates/campuscrew-100k.png')"></div>
+          <div class="cert-card__body">
+            <span class="cert-card__badge">IMG</span>
+            <h3>100K Milestone Honor</h3>
+            <p>CampusCrew · June 2026</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- WORK / PROJECTS -->
+    <section class="work" id="work">
+      <div class="section-head">
+        <span class="section-tag">Work</span>
+        <h2>Selected projects</h2>
+        <p class="section-note">Pulled live from MongoDB via the Express API.</p>
+      </div>
+
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn is-active" data-filter="all">All</button>
+      </div>
+
+      <div class="work__grid" id="projectGrid">
+        <!-- Skeleton loaders shown while fetching -->
+        <div class="project-card project-card--skeleton"></div>
+        <div class="project-card project-card--skeleton"></div>
+        <div class="project-card project-card--skeleton"></div>
+      </div>
+
+      <p class="work__empty" id="workEmpty" hidden>
+        No projects yet — run <code>node seed.js</code> in /backend, or add some via the API.
+      </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="contact__inner">
+        <div class="section-head">
+          <span class="section-tag">Contact</span>
+          <h2>Let's build something</h2>
+        </div>
+        <p class="contact__lead">
+          Have a project in mind, an internship opportunity, or just want to talk shop?
+          Drop a message — it lands straight in my database.
+        </p>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@email.com" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" id="submitBtn">
+            Send message <span aria-hidden="true">→</span>
+          </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built with HTML/CSS/JS, Express &amp; MongoDB. © <span id="year"></span> Rosan S</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
